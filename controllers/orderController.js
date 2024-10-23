@@ -1,4 +1,3 @@
-// const {Order, Consignor, Consignee, Item,LogisticManagerAssignment}= require(`../models/Order`);
 const Order= require('../models/Order');
 const Consignor= require('../models/Consignor');
 const Consignee= require('../models/Consignee');

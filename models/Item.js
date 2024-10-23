@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
-const Order = require('././Order');  // Import the Order model
 
 const Item = sequelize.define('Item', {
     itemId: {
@@ -27,7 +26,5 @@ const Item = sequelize.define('Item', {
     }
 });
 
-// Define the association between Item and Order
-// Item.belongsTo(Order, { foreignKey: 'orderId', onDelete: 'CASCADE' });
 
 module.exports = Item;

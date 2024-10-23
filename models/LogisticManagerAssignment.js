@@ -1,8 +1,5 @@
 const DataTypes=require('sequelize');
 const sequelize=require('../config/config');
-// const {Order}= require('../models/Order');
-// import Order from '../models/Order';
-// const LogisticManager= require('../models/LogisticManager');
 
 const LogisticManagerAssignment= sequelize.define('LogisticManagerAssignment',{
     orderId:{
@@ -24,7 +21,5 @@ const LogisticManagerAssignment= sequelize.define('LogisticManagerAssignment',{
     }
 });
 
-// LogisticManagerAssignment.belongsTo(LogisticManager,{foreignKey:'logisticManagerId'});
-// LogisticManagerAssignment.belongsTo(Order,{foreignKey:'orderId'});
 
 module.exports=LogisticManagerAssignment;

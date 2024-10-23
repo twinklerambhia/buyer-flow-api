@@ -1,10 +1,5 @@
 const DataTypes= require('sequelize');
 const sequelize = require('../config/config');
-// const {Consignor}= require('../models/Consignor');
-// const {Consignee}= require('../models/Consignee');
-// const {Item}= require('././Item');
-// const {LogisticManagerAssignment}= require('../models/LogisticManagerAssignment');
-
 
 
 const Order= sequelize.define('Order',{
@@ -81,9 +76,5 @@ const Order= sequelize.define('Order',{
 
 });
 
-// Order.belongsTo(Consignor,{foreignKey:'consignorId'});
-// Order.belongsTo(Consignee,{foreignKey:'consigneeId'});
-// Order.hasMany(Item, {foreignKey:'orderId'});
-// Order.hasOne(LogisticManagerAssignment,{foreignKey:'orderId'});
 
 module.exports=Order;

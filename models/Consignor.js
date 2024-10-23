@@ -1,6 +1,5 @@
 const DataTypes= require('sequelize');
 const sequelize= require('../config/config');
-// const {Order} = require('../models/Order');
 
 const Consignor= sequelize.define('Consignor',{
     consignorId:{
@@ -21,6 +20,5 @@ const Consignor= sequelize.define('Consignor',{
     
 });
 
-// Consignor.hasMany(Order,{foreignKey:'consignorId'});
 
 module.exports=Consignor;

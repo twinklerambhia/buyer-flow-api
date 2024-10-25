@@ -25,13 +25,17 @@
     "test": "tests"
   },
   "jest": {
-  "reporters": [
-    "default",
-    ["jest-html-reporter", {
-      "pageTitle": "Buyer Flow API Test Report",
-      "outputPath": "./test-report.html",
-      "includeFailureMsg": true,
-      "includeConsoleLog": true
-    }]
-  ]}
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporter",
+        {
+          "pageTitle": "Buyer Flow API Test Report",
+          "outputPath": "./test-report.html",
+          "includeFailureMsg": true,
+          "includeConsoleLog": true
+        }
+      ]
+    ]
+  }
 }

@@ -11,7 +11,8 @@ const createOrder= async (req,res)=>{
         
         const consignor = await Consignor.create(consignorDetails);
         const consignee= await Consignee.create(consigneeDetails);
-
+        const orderDate= new Date(orderDateTime);
+        const pickupDate= new Date(pickupDateTime);
         const order= await Order.create({
             supplierName,
             source,
@@ -20,8 +21,8 @@ const createOrder= async (req,res)=>{
             loadType,
             billToAddress,
             invoiceNumber,
-            orderDateTime,
-            pickupDateTime, 
+            orderDateTime: orderDate,
+            pickupDateTime: pickupDate, 
             insuranceNumber,
             consignorId: consignor.consignorId,
             consigneeId:consignee.consigneeId,

@@ -8,7 +8,11 @@ const sequelize=new Sequelize(database, username, password,
     {
         host:'localhost', 
         dialect:'mysql',
+        dialectOptions: {
+            charset: 'utf8mb4',
+        },
         logging:console.log,
+        
         define:{
             timestamps:true,
             underscored:true

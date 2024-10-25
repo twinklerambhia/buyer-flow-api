@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
   },
   "author": "",
@@ -12,9 +12,26 @@
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "jest-html-reporter": "^3.10.2",
     "mysql2": "^3.11.3",
-    "sequelize": "^6.37.4"
+    "sequelize": "^6.37.4",
+    "supertest": "^7.0.0"
   },
-  "devDependencies": {},
-  "description": ""
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "description": "",
+  "directories": {
+    "test": "tests"
+  },
+  "jest": {
+  "reporters": [
+    "default",
+    ["jest-html-reporter", {
+      "pageTitle": "Buyer Flow API Test Report",
+      "outputPath": "./test-report.html",
+      "includeFailureMsg": true,
+      "includeConsoleLog": true
+    }]
+  ]}
 }

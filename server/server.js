@@ -1,7 +1,7 @@
 const express= require('express');
 const bodyParser= require('body-parser');
 const orderRoutes= require('../routes/orderRoutes');
-const sequelize = require('../config/config'); // Sequelize instance
+const sequelize = require('../config/config'); 
 const Order= require('../models/Order');
 const Consignor= require('../models/Consignor');
 const Consignee= require('../models/Consignee');
@@ -10,7 +10,7 @@ const LogisticManagerAssignment=require('../models/LogisticManagerAssignment');
 const LogisticManager= require('../models/LogisticManager');
 
 const app= express();
-const PORT= 3000;
+const PORT= 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));

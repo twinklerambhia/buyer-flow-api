@@ -1,5 +1,13 @@
+const orderTestConfig =require('./controllers/orderControllerIndex');
+const logisticTestConfig= require('./controllers/logisticManagerAssignmentControllerIndex');
+
 const testConfig={
-    testOrder: false,
-    testLogistic:false
+    testOrder: true,
+    testLogistic:true
 }
-module.exports=testConfig;
+const testCases = [];
+if (testConfig.testOrder) testCases.push(orderTestConfig);
+if(testConfig.testLogistic) testCases.push(logisticTestConfig);
+
+
+module.exports={testConfig, testCases};

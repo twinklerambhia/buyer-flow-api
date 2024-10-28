@@ -1,5 +1,5 @@
 const axios = require('axios');
-const {testCases}= require('./testConfig');
+const {testCases}= require('./testConfig'); //this testCases is an array for further usage. Make changes in testConfig file as per your API requirements.
 
 const BASE_URL = 'http://localhost:8080';
 

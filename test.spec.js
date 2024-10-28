@@ -1,23 +1,16 @@
 const axios = require('axios');
-const orderTestConfig = require('./controllers/orderControllerIndex');
-const logisticTestConfig = require('./controllers/logisticManagerAssignmentControllerIndex');
-const testConfig= require('./testConfig');
+const {testCases}= require('./testConfig');
 
-const testConfigs = [];
-if (testConfig.testOrder){
-  testConfigs.push(orderTestConfig);
-}
-if(testConfig.testLogistic){
-  testConfigs.push(logisticTestConfig);
-}
-if(testConfigs.Length===0) {
-  process.exit(1);
-}
 const BASE_URL = 'http://localhost:8080';
 
 describe('API Endpoint Tests', () => {
-  testConfigs.forEach((config) => {
-    const { endpoint, method, payload, expectedResponse } = config;
+  if(testCases.Length===0) {
+    console.log("No tests specified. Please specify the tests.");
+    process.exit(1);
+  }
+
+  testCases.forEach((testCase) => {
+    const { endpoint, method, payload, expectedResponse } = testCase;
 
     test(`Testing ${method.toUpperCase()} ${endpoint}`, async () => {
       try {

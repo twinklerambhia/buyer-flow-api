@@ -1,7 +1,7 @@
 module.exports = {
-    endpoint: '/api/orders',  // Define the endpoint path
-    method: 'post',           // HTTP method for this endpoint (POST, GET, etc.)
-    payload: {                // Define the request payload
+    endpoint: '/api/orders',  
+    method: 'post',         
+    payload: {               
       supplierName: 'Supplier 1',
       source: 'Source Location',
       destination: 'Destination Location',
@@ -18,7 +18,7 @@ module.exports = {
       remarkForConsignor: 'Special consignor remark for this order',
       remark: 'General order remark'
     },
-    expectedResponse: {       // Define expected response structure and data
+    expectedResponse: {       
       status: 201,
       body: {
         message: 'order created successfully',

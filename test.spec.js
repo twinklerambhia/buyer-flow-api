@@ -1,10 +1,18 @@
 const axios = require('axios');
 const orderTestConfig = require('./controllers/orderControllerIndex');
 const logisticTestConfig = require('./controllers/logisticManagerAssignmentControllerIndex');
+const testConfig= require('./testConfig');
 
-
-const testConfigs = [orderTestConfig, logisticTestConfig];
-
+const testConfigs = [];
+if (testConfig.testOrder){
+  testConfigs.push(orderTestConfig);
+}
+if(testConfig.testLogistic){
+  testConfigs.push(logisticTestConfig);
+}
+if(testConfigs.Length===0) {
+  process.exit(1);
+}
 const BASE_URL = 'http://localhost:8080';
 
 describe('API Endpoint Tests', () => {

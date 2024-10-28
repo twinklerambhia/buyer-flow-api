@@ -1,6 +1,7 @@
 const express= require('express');
 const router= express.Router();
-const {createOrder, assignLogisticManager}= require('../controllers/orderController');
+const {createOrder}= require('../controllers/orderController');
+const{assignLogisticManager}= require('../controllers/logisticManagerAssignmentController');
 
 router.post('/',createOrder);
 

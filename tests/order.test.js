@@ -1,11 +1,11 @@
 const request = require('supertest');
 const express = require('express');
-const { createOrder, assignLogisticManager } = require('./controllers/orderController');
-const Order = require('./models/Order');
-const Consignor = require('./models/Consignor');
-const Consignee = require('./models/Consignee');
-const Item = require('./models/Item');
-const LogisticManagerAssignment = require('./models/LogisticManagerAssignment');
+const { createOrder, assignLogisticManager } = require('../controllers/orderController');
+const Order = require('../models/Order');
+const Consignor = require('../models/Consignor');
+const Consignee = require('../models/Consignee');
+const Item = require('../models/Item');
+const LogisticManagerAssignment = require('../models/LogisticManagerAssignment');
 
 
 const app = express();
@@ -115,7 +115,7 @@ describe('Order Controller', () => {
 
 const fs = require('fs').promises;
 const path = require('path');
-const sequelize = require('./config/config');
+const sequelize = require('../config/config');
 
 afterAll(async () => {
     await sequelize.close();
